@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #555;
+    --bg-color: #f9f9f9;
+    --border-color: #ddd;
+    --footer-bg-color: #333;
+    --footer-text-color: #fff;
+    --padding: 20px;
+    --margin: 20px;
+    --border-radius: 5px;
+    --font-size-large: 1.2em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding);
+}
+
+.welcome-text {
+    text-align: center;
+    margin: var(--margin);
+    font-size: var(--font-size-large);
+}
+
+.boat-image {
+    display: block;
+    margin: var(--margin) auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: var(--margin);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--padding);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+form button {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+form button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+footer {
+    text-align: center;
+    padding: var(--padding);
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    margin-top: var(--margin);
+}
+
+.articles-intro {
+    text-align: justify;
+    margin: var(--margin);
+    font-size: var(--font-size-large);
+    color: var(--secondary-color);
+}
+
+article {
+    margin-bottom: 30px;
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+article p {
+    line-height: 1.6;
+    color: var(--secondary-color);
+    text-align: justify;
+}
+
+article img {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: var(--padding);
+}
+
+.gal-item {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
+}
+
+.gal-item img {
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gal-item p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.boat-list {
+    margin-top: var(--margin);
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.boat-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.boat-list li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+.boat-list li:hover {
+    background-color: #e6f7ff;
+}
+
+.boat-list li a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.about {
+    margin-top: var(--margin);
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.about p {
+    line-height: 1.5;
+    color: var(--secondary-color);
+    text-align: justify;
+}
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: var(--margin);
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .gal-item img {
+        height: auto;
+    }
+}
